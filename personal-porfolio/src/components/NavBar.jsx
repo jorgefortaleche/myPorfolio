@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   const lista = [
     { id: 1, name: "inicio" },
-    { id: 2, name: "sobre mí" },
     { id: 3, name: "proyectos" },
-    { id: 4, name: "tecnologías" },
+    { id: 4, name: "tecnologias" },
     { id: 5, name: "contacto" },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-6 text-white bg-black bg-fixed">
+    <div className="fixed top-0 z-auto flex justify-between items-center w-full h-20 px-6 text-white bg-black bg-fixed">
       <div>
         <h1 className="text-5xl font-signature ml-2">Jorge</h1>
       </div>
@@ -21,9 +21,11 @@ function Navbar() {
         {lista.map((object) => (
           <li
             key={object.id}
-            className="cursor-pointer px-4 capitalize font-medium text-xl hover:scale-105 duration-200  text-gray-400"
+            className="cursor-pointer px-4 capitalize font-medium text-2xl hover:scale-105 duration-200  text-gray-400 hover:text-violet-600  focus:outline-none "
           >
-            {object.name}
+            <Link to={object.name} smooth duration={600}>
+              {object.name}
+            </Link>
           </li>
         ))}
       </ul>
@@ -42,7 +44,14 @@ function Navbar() {
               key={object.id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl "
             >
-              {object.name}
+              <Link
+                onClick={() => setNav(!nav)}
+                to={object.name}
+                smooth
+                duration={600}
+              >
+                {object.name}
+              </Link>
             </li>
           ))}
         </ul>
