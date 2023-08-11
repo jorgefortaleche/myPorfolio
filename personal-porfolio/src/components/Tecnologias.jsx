@@ -5,7 +5,7 @@ import javaScript from "../assets/ImagesPorfolio/JavaScript.png";
 import node from "../assets/ImagesPorfolio/node-js.jpg";
 import postgresql from "../assets/ImagesPorfolio/Postgresql.png";
 import reactImage from "../assets/ImagesPorfolio/reactImage.png";
-import reduxImage from "../assets/ImagesPorfolio/reduxImage.jpg";
+import reduxImage from "../assets/ImagesPorfolio/reduxImage.png";
 import sequelizeImage from "../assets/ImagesPorfolio/sequelize.png";
 import tailwind from "../assets/ImagesPorfolio/tailwind.png";
 import expressJs from "../assets/ImagesPorfolio/express.png";
@@ -72,7 +72,7 @@ function Tecnologias() {
       id: 10,
       src: expressJs,
       title: "express",
-      style: "shadow-md  shadow-gray-600",
+      style: "shadow-md shadow-zinc-500",
     },
     {
       id: 11,
